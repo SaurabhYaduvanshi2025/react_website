@@ -37,6 +37,10 @@ export default function Header() {
             <NavLink to="/contact" className={navLinkStyles}>
               Contact
             </NavLink>
+             <NavLink to="/github" className={navLinkStyles}>
+              Github
+            </NavLink>
+
           </div>
 
           {/* Right Action Buttons */}
@@ -131,6 +135,23 @@ export default function Header() {
             >
               Contact
             </NavLink>
+
+             <NavLink
+              to="/github"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `block px-4 py-2.5 rounded-lg text-sm font-semibold ${
+                  isActive
+                    ? "bg-orange-50 text-orange-600"
+                    : "text-slate-700 hover:bg-slate-50"
+                }`
+              }
+            >
+              Github
+            </NavLink>
+
+
+            
 
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-2 px-1">
               <Link
